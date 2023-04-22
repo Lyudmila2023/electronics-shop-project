@@ -4,6 +4,12 @@ import csv
 
 item = Item("Смартфон", 10000, 20)
 
+
+def test_init():
+    assert repr(item) == "Item('Смартфон', 10000, 20)"
+
+def test_repr():
+    assert str(item) == 'Смартфон'
 def test_calculate_total_price():
     assert item.calculate_total_price() == 200000
 
