@@ -49,8 +49,6 @@ class Item:
                 name = item["name"]
                 price = int(item["price"])
                 quantity = int(item["quantity"])
-                # exemp_class = name, price, quantity
-                # print(exemp_class)
                 cls.all.append(name)
             return name, price, quantity
 
