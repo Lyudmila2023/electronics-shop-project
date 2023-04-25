@@ -22,7 +22,8 @@ def test_apply_discount():
 
 
 def test_instantiate_from_csv():
-    assert len(item.instantiate_from_csv()) == 3
+    Item.import_from_csv()
+    assert len(Item.all) == 5
 
 
 def test_name():
@@ -33,8 +34,3 @@ def test_name():
 
 def test_string_to_number():
     assert Item.string_to_number('6.0') == 6
-
-
-
-
-
