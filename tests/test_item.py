@@ -1,6 +1,6 @@
 """Здесь надо написать тесты с использованием pytest для модуля item."""
 from src.item import Item
-import csv
+
 
 item = Item("Смартфон", 10000, 20)
 
@@ -22,7 +22,7 @@ def test_apply_discount():
 
 
 def test_instantiate_from_csv():
-    Item.import_from_csv()
+    Item.instantiate_from_csv()
     assert len(Item.all) == 5
 
 

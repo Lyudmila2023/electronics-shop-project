@@ -20,6 +20,9 @@ class Item:
         self.price = price
         self.quantity = quantity
 
+    def __add__(self, other):
+        return self.quantity + other.quantity
+
     def __str__(self):
         return f'{self.__name}'
 
@@ -47,10 +50,10 @@ class Item:
             reader = csv.DictReader(csvfile, delimiter=",")
             for item in reader:
                 name = item["name"]
-                price = int(item["price"])
-                quantity = int(item["quantity"])
+                # price = int(item["price"])
+                # quantity = int(item["quantity"])
                 cls.all.append(name)
-            return name, price, quantity
+            # return name, price, quantity
 
     @staticmethod
     def string_to_number(value):
