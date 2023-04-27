@@ -49,11 +49,8 @@ class Item:
         with open("../homework-2/items.csv", newline='') as csvfile:
             reader = csv.DictReader(csvfile, delimiter=",")
             for item in reader:
-                name = item["name"]
-                # price = int(item["price"])
-                # quantity = int(item["quantity"])
-                cls.all.append(name)
-            # return name, price, quantity
+                cls.all.append(item)
+
 
     @staticmethod
     def string_to_number(value):
