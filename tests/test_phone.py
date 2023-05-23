@@ -14,7 +14,6 @@ def test_number():
         phone1.number_of_sim = 0
 
 
-
 def test_number_property():
     assert phone1.number_of_sim == 2
 

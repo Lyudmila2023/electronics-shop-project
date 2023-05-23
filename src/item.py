@@ -51,7 +51,6 @@ class Item:
             for item in reader:
                 cls.all.append(item)
 
-
     @staticmethod
     def string_to_number(value):
         return int(float(value))
@@ -65,8 +64,4 @@ class Item:
         if len(self.__name) < 10:
             self.__name == name
         else:
-            print("Exception: Длина наименования товара превышает 10 символов")
-
-
-
-
+            Exception("Длина наименования товара превышает 10 символов")
